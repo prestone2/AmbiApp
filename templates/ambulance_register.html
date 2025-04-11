@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Ambulance Driver Registration</title>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <link rel="stylesheet" href="{% static 'assets/css/ambulance_registration.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+</head>
+
+<body>
+<div class="container-fluid">
+    <h1 class="form-title">Driver Registration</h1>
+    <form method="POST" action="{% url 'ambulance_register' %}">
+        {% csrf_token %}
+        <div class="main-user-info">
+            <div class="user-input-box">
+                <label for="firstname">First Name</label>
+                <input type="text"
+                       id="firstname"
+                       name="firstname"
+                       required
+                       placeholder="Enter First Name"/>
+            </div>
+            <div class="user-input-box">
+                <label for="lastname">Last Name</label>
+                <input type="text"
+                       id="lastname"
+                       name="lastname"
+                       required
+                       placeholder="Enter Last Name"/>
+            </div>
+            <div class="user-input-box">
+                <label for="Phone_number">Phone Number</label>
+                <input type="text"
+                       id="Phone_number"
+                       name="Phone_number"
+                       required
+                       placeholder="Enter Phone Number"/>
+            </div>
+            <div class="user-input-box">
+                <label for="email">Email Address</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       required
+                       placeholder="Enter Email"/>
+            </div>
+            <div class="user-input-box">
+                <label for="age">Age</label>
+                <input type="number"
+                       id="age"
+                       name="age"
+                       required
+                       placeholder="Enter Age"/>
+            </div>
+            <div class="user-input-box">
+                <label for="Ambulance_No">Ambulance Number</label>
+                <input type="text"
+                       id="Ambulance_No"
+                       name="Ambulance_No"
+                       required
+                       placeholder="Enter Ambulance Number"/>
+            </div>
+
+            <div class="user-input-box">
+                <label for="Ambulance_type">Ambulance Type</label>
+                <select name="Ambulance_type" id="Ambulance_type" required>
+                    <option value="" disabled selected>Choose...</option>
+                    <option value="Basic Life Support Ambulance">Basic Life Support Ambulance</option>
+                    <option value="Advance Life Support Ambulance">Advance Life Support Ambulance</option>
+                    <option value="Patient Transfer Ambulance">Patient Transfer Ambulance</option>
+                    <option value="Mortuary Ambulance">Mortuary Ambulance</option>
+                </select>
+            </div>
+
+            <div class="user-input-box">
+                <label for="Status">Ambulance Status</label>
+                <select name="Status" id="Status" required>
+                    <option value="" disabled selected>Choose...</option>
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+            </div>
+
+
+            <div class="user-input-box">
+                <label for="username">Username</label>
+                <input type="text"
+                       id="username"
+                       name="username"
+                       required
+                       placeholder="Enter Username"/>
+            </div>
+            <div class="user-input-box">
+                <label for="password">Password</label>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       required
+                       placeholder="Enter Password"/>
+            </div>
+        </div>
+
+        <div class="user-input-box">
+            <label for="Gender">Gender</label>
+            <select name="Gender" id="Gender" required>
+                <option value="" disabled selected>Choose...</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-submit-btn">
+            <input type="submit" value="Register">
+        </div>
+        <a href="{% url 'ambulance_login' %}" class="already">
+            You already have an account? Login here.</a>
+    </form>
+</div>
+
+</body>
+
+</html>

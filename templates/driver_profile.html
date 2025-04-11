@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ambulance Booking System</title>
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+    {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/footer1.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:charlesjeckton10@yahoo.com">charlesjeckton10@yahoo.com</a>
+        <i class="bi bi-phone"></i> +254 748 06 45 30
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="https://www.twitter.com/@CharlesJeckton" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/charles.jeckton.9" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com/cjeckton?igshid=MzNlNGNkZWQ4Mg==" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/charles-jeckton-423730206" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="{% url 'booking_request' %}" class="logo me-auto"><img src="{% static '' %}" alt="" class="img-fluid"> <i>Ambulance</i></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+            <li><a class="nav-link scrollto" href="{% url 'booking_request' %}">Booking Request</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'emergency_booking' %}">Emergency Booking Request</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'near_hospitals' %}">Nearby Hospital</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'ambulance_status' %}">Ambulance Status</a></li>
+            <li class="dropdown"><a class="nav-link scrollto active" href="#"><span></span> Account <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'driver_profile' %}">Update Profile</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Book Ambulance Section -->
+  <section id="ambulance">
+
+  </section><!-- End Book Ambulance -->
+
+   <main id="main">
+
+    <!-- Counts Section -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="fas fa-ambulance"></i>
+              <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Ambulances</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="far fa-hospital"></i>
+              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hospitals</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-user"></i>
+              <span data-purecounter-start="0" data-purecounter-end="900" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-comment"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Testimonials</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+  </main><!-- End #main -->
+
+  <!-- footer section starts  -->
+<footer class="footer">
+
+   <section class="flex">
+
+      <div class="box">
+         <a href="tel:0748064530"><i class="fas fa-phone"></i><span>0748064530</span></a>
+         <a href="https://api.whatsapp.com/send?phone=254779090549"><i class="fab fa-whatsapp"></i><span>0779090549</span></a>
+         <a href="mailto:charlesjeckton10@gmail.com"><i class="fas fa-envelope"></i><span>charlesjeckton10@gmail.com</span></a>
+         <a href="https://www.google.com/maps/place/Top+Plaza,+Kindaruma+Rd,+Nairobi/@-1.2973285,36.7896633,17z/data=!3m1!4b1!4m6!3m5!1s0x182f10982e8d17a3:0xda37b619e7b500f!8m2!3d-1.2973339!4d36.7922382!16s%2Fg%2F11rrq7wnd2?entry=ttu"><i class="fas fa-map-marker-alt"></i><span>Nairobi, Kenya - 00100</span></a>
+      </div>
+
+      <div class="box">
+         <a href="{% url 'booking_request' %}"><span>Booking Request</span></a>
+         <a href="{% url 'emergency_booking' %}"><span>Emergency Booking Request </span></a>
+         <a href="{% url 'near_hospitals' %}"><span>Nearby Hospitals</span></a>
+         <a href="{% url 'ambulance_status' %}"><span>Ambulance Status</span></a>
+         <a href="{% url 'driver_profile' %}"><span>Update Profile</span></a>
+          <a href="{% url 'update_profile' %}"><span>Logout</span></a>
+
+
+
+      </div>
+
+      <div class="box">
+         <a href="https://www.facebook.com/charles.jeckton.9"><span>Facebook</span><i class="fab fa-facebook-f"></i></a>
+         <a href="https://www.twitter.com/@CharlesJeckton"><span>Twitter</span><i class="fab fa-twitter"></i></a>
+         <a href="https://www.linkedin.com/in/charles-jeckton-423730206"><span>Linkedin</span><i class="fab fa-linkedin"></i></a>
+         <a href="https://instagram.com/cjeckton?igshid=MzNlNGNkZWQ4Mg=="><span>Instagram</span><i class="fab fa-instagram"></i></a>
+
+      </div>
+
+   </section>
+
+   <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span>Mr. Jeckton</span>  |  all rights reserved!</div>
+
+</footer>
+
+<!-- footer section ends -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
